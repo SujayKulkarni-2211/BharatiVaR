@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatiVaR - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">BharatiVaR</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Shop</a>
+                        <div class="dropdown-content">
+                            <a href="shop-by-seller.html">Shop by Seller</a>
+                            <a href="shop-by-product.html">Shop by Product</a>
+                        </div>
+                    </li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-button">Login</a>
+            </div>
+        </div>
+    </header>       
+    
+    <!-- Login Form -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login to BharatiVaR</h2>
+            <!-- Add a select dropdown to choose login type -->
+            <form id="login-form">
+                <select id="login-select" required>
+                    <option value="">Select Login Type</option>
+                    <option value="user">User/Customer</option>
+                    <option value="seller">Seller</option>
+                    <option value="postman">Postman</option>
+                </select>
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <input type="submit" value="Login">
+            </form>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to handle login type switching and redirection -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+            var loginType = document.getElementById('login-select').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Here you can handle login based on the selected loginType
+            switch (loginType) {
+                case 'user':
+                    // Redirect to index.html for user login
+                    window.location.href = 'index.html';
+                    break;
+                case 'seller':
+                    // Redirect to seller page
+                    window.location.href = 'seller.html';
+                    break;
+                case 'postman':
+                    // Redirect to postman page
+                    window.location.href = 'postman.html';
+                    break;
+                default:
+                    alert('Please select a login type');
+            }
+        });
+    </script>
+
+</body>
+</html>

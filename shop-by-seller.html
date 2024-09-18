@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop by Seller - BharatiVaR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+
+    <style>
+        /* Include the updated CSS here */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">BharatiVaR</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Shop</a>
+                        <div class="dropdown-content">
+                            <a href="shop-by-seller.html">Shop by Seller</a>
+                            <a href="shop-by-product.html">Shop by Product</a>
+                        </div>
+                    </li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-button">Login</a>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for products...">
+                    <button onclick="searchProducts()">
+                        <i class="fas fa-search search-icon"></i> <!-- Font Awesome search icon -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Shop by Seller</h1>
+            <h3 style="color: rgb(255, 208, 1);">Discover unique products from your favorite sellers.</h3>
+            <div class="cta-buttons">
+                <a href="#">Explore Sellers</a>
+                <a href="login.html">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Seller Section -->
+    <section class="shop">
+        <h2>Our Products</h2>
+        <div id="product-grid" class="product-grid">
+            <div class="product-item">
+                <img src="pottery.jpeg" alt="Pottery Product">
+                <h3>Handcrafted Pottery</h3>
+                <p>Beautiful handcrafted pottery from skilled artisans.</p>
+                <a href="#">View Details</a>
+            </div><br>
+            <div class="product-item">
+                <img src="saree.jpeg" alt="Silk Saree">
+                <h3>Silk Saree</h3>
+                <p>Elegant silk sarees made with traditional techniques.</p>
+                <a href="#">View Details</a>
+            </div><br>
+            <div class="product-item">
+                <img src="toys.jpeg" alt="Wooden Toys">
+                <h3>Wooden Toys</h3>
+                <p>Handmade wooden toys crafted with care.</p>
+                <a href="#">View Details</a>
+            </div><br>
+            <div class="product-item">
+                <img src="terracotta.jpeg" alt="Terracotta Decor">
+                <h3>Terracotta Decor</h3>
+                <p>Beautiful terracotta decor pieces from expert artisans.</p>
+                <a href="#">View Details</a>
+            </div><br>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop-by-seller.html">Explore Artisans</a></li>
+                    <li><a href="shop-by-product.html">Explore Products</a></li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

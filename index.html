@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatiVaR - Bridging Heritage with Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">BharatiVaR</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Shop</a>
+                        <div class="dropdown-content">
+                            <a href="shop-by-seller.html">Shop by Seller</a>
+                            <a href="shop-by-product.html">Shop by Product</a>
+                        </div>
+                    </li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-button">Login</a>
+            </div>
+        </div>
+    </header>       
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Explore the finest Indian crafts and connect with artisans from every corner of the country.</h1>
+            <h3 style="color: rgb(255, 208, 1);">Bridging Heritage and Artisans with Remarkable Advanced Technology for International Ventures and Reach</h3>
+            <div class="cta-buttons">
+                <a href="shop-by-product.html">Explore Products</a>
+                <a href="shop-by-seller.html">Discover Artisans</a>
+                <a href="login.html">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="decorative-line">
+            <span>Our Innovations</span>
+        </div>
+        <div class="highlight-items">
+            <div class="highlight-item">
+                <i class="fa-solid fa-vr-cardboard highlight-icon"></i>
+                <h3>VR/AR Experience</h3>
+                <p>Immerse yourself in a shopping experience like never before.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fa-solid fa-certificate highlight-icon"></i>
+                <h3>Authenticity Assurance</h3>
+                <p>AI/ML-powered verification of authentic, handmade products.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fa-solid fa-person-arrow-up-from-line highlight-icon"></i>
+                <h3>Personalization</h3>
+                <p>Receive tailored recommendations based on your preferences.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fa-solid fa-recycle highlight-icon"></i>
+                <h3>Eco-Friendly Practices</h3>
+                <p>Support sustainability with green shipping and eco-friendly products.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fa-solid fa-truck-fast highlight-icon"></i>
+                <h3>Smart packaging</h3>
+                <p>To ensure safe secure spoilage free delivery of your order.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Products & Artisans</h2>
+        
+        <!-- Image size control -->
+        <div class="size-control">
+            <label for="image-size">Adjust Image Size:</label>
+            <input type="range" id="image-size" min="100" max="400" value="200" oninput="adjustImageSize(this.value)">
+        </div>
+    
+        <div class="product-carousel">
+            <div class="product-item">
+                <img src="pottery.jpeg" alt="Product 1" class="product-image">
+                <h3>Handcrafted Pottery</h3>
+                <p>From Kumartuli artisans.</p>
+            </div>
+            <div class="product-item">
+                <img src="saree.jpeg" alt="Product 2" class="product-image">
+                <h3>Silk Saree</h3>
+                <p>From Santiniketan weavers.</p>
+            </div>
+            <div class="product-item">
+                <img src="toys.jpeg" alt="Product 3" class="product-image">
+                <h3>Wooden Toys</h3>
+                <p>From Bishnupur craftsmen.</p>
+            </div>
+            <div class="product-item">
+                <img src="terracotta.jpeg" alt="Product 4" class="product-image">
+                <h3>Terracotta Decor</h3>
+                <p>From Bankura artisans.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop-by-seller.html">Explore Artisans</a></li>
+                    <li><a href="shop-by-product.html">Explore Products</a></li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- Link to JS file -->
+</body>
+</html>

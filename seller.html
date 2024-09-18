@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - BharatiVaR</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your CSS styles here or in an external stylesheet */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header, .footer {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .user-actions {
+            float: right;
+        }
+
+        .user-actions .login-button {
+            background-color: #ffc107;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .user-actions .login-button:hover {
+            background-color: #e0a800;
+        }
+
+        .seller-dashboard {
+            padding: 20px;
+        }
+
+        .upload-section, .existing-products {
+            margin-bottom: 20px;
+        }
+
+        .upload-section form input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .upload-section form input[type="submit"] {
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .upload-section form input[type="submit"]:hover {
+            background-color: #e0a800;
+        }
+
+        .product-carousel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 300px;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            margin-top: 15px;
+            font-size: 1.25em;
+        }
+
+        .product-item p {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">BharatiVaR</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Shop</a>
+                        <div class="dropdown-content">
+                            <a href="shop-by-seller.html">Shop by Seller</a>
+                            <a href="shop-by-product.html">Shop by Product</a>
+                        </div>
+                    </li>
+                    <li><a href="vr.html">VR/AR Experience</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-button">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seller Dashboard -->
+    <section class="seller-dashboard">
+        <div class="container">
+            <h1>Seller Dashboard</h1>
+            
+            <!-- Upload New Product Section -->
+            <div class="upload-section">
+                <h2>Upload New Product</h2>
+                <form id="upload-form">
+                    <input type="text" id="product-name" placeholder="Product Name" required>
+                    <input type="text" id="product-description" placeholder="Product Description" required>
+                    <input type="number" id="product-price" placeholder="Product Price" required>
+                    <input type="file" id="product-image" required>
+                    <input type="submit" value="Upload Product">
+                </form>
+            </div>
+            
+            <!-- Existing Products Section -->
+            <div class="existing-products">
+                <h2>Existing Products</h2>
+                <div id="product-list" class="product-carousel">
+                    <!-- Existing products will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle product upload logic here
+            var productName = document.getElementById('product-name').value;
+            var productDescription = document.getElementById('product-description').value;
+            var productPrice = document.getElementById('product-price').value;
+            var productImage = document.getElementById('product-image').files[0];
+
+            // For demonstration, we'll just add the product to the existing products list
+            var productList = document.getElementById('product-list');
+            var productItem = document.createElement('div');
+            productItem.className = 'product-item';
+            productItem.innerHTML = `
+                <h3>${productName}</h3>
+                <p>${productDescription}</p>
+                <p>Price: $${productPrice}</p>
+                <img src="${URL.createObjectURL(productImage)}" alt="${productName}">
+            `;
+            productList.appendChild(productItem);
+
+            // Clear the form
+            document.getElementById('upload-form').reset();
+        });
+
+        // Function to load existing products (this would typically fetch from a server)
+        function loadExistingProducts() {
+            var productList = document.getElementById('product-list');
+            // Example existing products
+            var existingProducts = [
+                { name: 'Handcrafted Pottery', description: 'From Kumartuli artisans.', price: 50, image: 'pottery.jpeg' },
+                { name: 'Silk Saree', description: 'From Santiniketan weavers.', price: 150, image: 'saree.jpeg' },
+                { name: 'Wooden Toys', description: 'From Bishnupur craftsmen.', price: 30, image: 'toys.jpeg' },
+                { name: 'Terracotta Decor', description: 'From Bankura artisans.', price: 70, image: 'terracotta.jpeg' }
+            ];
+
+            existingProducts.forEach(product => {
+                var productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                    <img src="${product.image}" alt="${product.name}">
+                `;
+                productList.appendChild(productItem);
+            });
+        }
+
+        // Load existing products on page load
+        window.onload = loadExistingProducts;
+    </script>
+</body>
+</html>

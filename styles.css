@@ -1,0 +1,569 @@
+/* General Styles */
+body {
+    font-family: 'Marcellus', serif;
+    background-color: #f5f0e1;
+    margin: 0;
+    padding: 0;
+    color: #4a2e02;
+}
+
+/* Header */
+header {
+    background-color: #8e1c1a;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end; /* This moves the items to the right */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Optional: Adds space between the items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black; /* Adjust as needed */
+}
+
+
+/* header nav ul li:hover {
+    text-decoration: underline;
+} */
+
+header .user-actions {
+    display: flex;
+    align-items: center;
+}
+
+header .user-actions img {
+    width: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 60px;
+    background: url('https://i.imgur.com/5dUTYMG.jpg') no-repeat center center/cover;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Marcellus', serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero .cta-buttons {
+    display: flex;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero .cta-buttons a {
+    background-color: #e18b1c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    
+
+}
+
+.hero .cta-buttons a:hover {
+    background-color: #c6741a;
+}
+
+/* Decorative Line Break */
+.decorative-line {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+.decorative-line::before,
+.decorative-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #8e1c1a; /* Maroon color for the line */
+}
+
+.decorative-line::before {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.decorative-line::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.decorative-line span {
+    background: #f9f3e1; /* Background color matching the section */
+    padding: 0 15px;
+    font-family: 'Marcellus', serif;
+    font-size: 24px;
+    color: #4a2e02; /* Dark earthy tone */
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Highlights Section */
+.highlights {
+    background-color: #f9f3e1; /* Light beige background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.highlights h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Marcellus', serif;
+    color: #4a2e02; /* Dark earthy tone */
+}
+
+.highlight-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.highlight-item {
+    width: 22%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+}
+
+.highlight-icon {
+    font-size: 20px;
+    color: #250100; /* Maroon color for icons */
+    margin-bottom: 15px;
+}
+
+.highlight-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+
+/* Featured Products */
+.featured {
+    padding: 50px 0;
+    background-color: #fff5e0;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.product-carousel {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-item {
+    width: 22%;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    margin: 15px 0 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #8e1c1a;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #fff5e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e18b1c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #c6741a;
+}
+
+
+/* Dropdown CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Other CSS rules */
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li:hover {
+    text-decoration: bold;
+}
+
+header .user-actions {
+    display: flex;
+    align-items: center;
+}
+
+header .user-actions img {
+    width: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+/* Login Button */
+.login-button {
+    background-color: #e18b1c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #c6741a;
+}
+/* Dropdown for login type */
+.login-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+/* Styling the select option */
+.login-box option {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff5e0;
+}
+
+/* Adjust the placeholder color for dropdown */
+.login-box select:invalid {
+    color: #aaa;
+}
+
+/* Ensures a default style for the dropdown */
+.login-box select:focus {
+    border-color: #e18b1c;
+    outline: none;
+}
+
+/* Styling for the submit button for hover and active states */
+.login-box input[type="submit"]:hover {
+    background-color: #c6741a;
+}
+
+.login-box input[type="submit"]:active {
+    background-color: #b56319;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.dashboard p {
+    font-size: 18px;
+    color: #4a2e02;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#search-input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.search-container button {
+    background-color: #8e1c1a;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #6b1410;
+}
+
+.search-icon {
+    color: #FFD43B;
+    font-size: 16px; /* Adjusted size for the search icon */
+    vertical-align: middle;
+}
+
+/* Section styling */
+.featured {
+    padding: 50px 20px;
+    background-color: #e9dbc3;
+    text-align: center;
+}
+
+.product-carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 0 0 23%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 200px; /* Default size */
+    height: auto;
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Smooth transition on resize */
+}
+
+/* Range input for adjusting image size */
+.size-control {
+    margin-bottom: 20px;
+}
+
+.size-control input[type="range"] {
+    width: 200px;
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: #f9f3e1; /* Light background for the contact section */
+    padding: 50px 20px;
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #8e1c1a; /* Maroon color for the heading */
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #4a2e02; /* Dark earthy tone for labels */
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #8e1c1a; /* Maroon color for the submit button */
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #701415; /* Darker maroon color on hover */
+}
