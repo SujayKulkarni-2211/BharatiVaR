@@ -69,7 +69,8 @@ header .user-actions img {
 /* Hero Section */
 .hero {
     margin-top: 60px;
-    background: url('https://i.imgur.com/5dUTYMG.jpg') no-repeat center center/cover;
+    background-color:#f5f0e1;
+    /* background: url('https://i.imgur.com/5dUTYMG.jpg') no-repeat center center/cover; */
     height: 600px;
     position: relative;
     display: flex;
